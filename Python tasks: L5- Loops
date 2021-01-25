@@ -6,7 +6,7 @@ import random
 number=random.randint(0, 100)
 ##print(number)
 attempt=1
-tryNum=int(input("vvedy number: " ))
+tryNum=int(input("input the number from 0 to 100: " ))
 while attempt <=10 or tryNum == number :
     if tryNum > number:
         print("%d try: Your number bigger than the required one!" % (attempt))
@@ -18,12 +18,11 @@ while attempt <=10 or tryNum == number :
     print("Try again, %d try" % (attempt+1))
     if attempt==9:
         print("Your last try!!!")
-    tryNum=int(input("vvedy number: " ))
+    tryNum=int(input("input the number from 1 to 100: " ))
     attempt+=1
     if attempt==10 and  tryNum != number:
         print("Sorry, attempt %d. You loose!" %(attempt))
         break
-    
 print("The random number is: ", number)  
 
 
@@ -31,11 +30,11 @@ print("The random number is: ", number)
 counter=0
 for i in range (1,11):
     a=int(input("input the %d number " % i))
-    if abs(a)<= 2:
+    if abs(a) <= 2:
        print("wrong number")
        a=int(input("input the %d number " % i))
-    if a%5==0:
-        counter= counter + 1
+    if a%5 == 0:
+        counter = counter + 1
 print( "чисел, що кратні 5-ти: ",counter)
 
 3. print("Вивести на екран таблицю множення (від 1 до 9).")
@@ -49,10 +48,10 @@ for i in range (1,10):
 кількість чисел, що знаходяться  в діапазоні значень від P до H. При введенні числа рівного P або H, припинити обчислення та вивести результат.")
 p=int(input ("enter P "))
 h=int(input("enter H "))
-sum=0
-total=0
-multiplic=1
-string=[]
+sum = 0
+total = 0
+multiplic = 1
+string = []
 if p>h:
     (p,h)=(h,p)
 number=int(input("vvedit chyslo "))
@@ -63,7 +62,7 @@ while number!=p and number !=h:
         multiplic *= number
     else:
         if number in range (p,h+1):
-            total +=1
+            total += 1
     string.append(number)
     print ("P = ",p, " H = ",h, " all numbers: ",string)
     print("суму тих чисел, які менше P = %d" %sum)       
@@ -72,17 +71,17 @@ while number!=p and number !=h:
     number=int(input("vvedit chyslo "))
 
 6. print("6. Для чисел, що вводяться користувачем, визначити відсоток додатних та від’ємних чисел. При введенні числа 0 закінчити роботу.")
-pos=0
-neg=0
+positiveNum=0
+negativeNum=0
 counter=1
 number= int(input("input the number "))
 while number!=0:
     if number>0:
-        pos+=1
+        positiveNum += 1
     else:
-        neg+=1
+        negativeNum += 1
     print("total numbers= %d" %counter)
-    print("positive numbers =", pos, ". % додатних= ",pos*100/counter)
-    print("negative numbers= ", neg, ". % від’ємних= ",neg*100/counter)
-    number= int(input("input the number "))
-    counter+=1
+    print("positive numbers = ", positiveNum, ". % додатних= ",positiveNum * 100 / counter)
+    print("negative numbers= ", negativeNum, ". % від’ємних= ",negativeNum * 100 / counter)
+    number = int(input("input the number "))
+    counter += 1
