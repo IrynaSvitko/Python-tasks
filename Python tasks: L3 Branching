@@ -1,0 +1,70 @@
+print("L3.2.Залежно від вибору користувача, обчислити площу або прямокутника, \
+або трикутника, або круга. Якщо обрані прямокутник або трикутник, то \
+треба запросити довжини сторін; круга – його радіус.")
+import math
+pi=math.pi
+c="circle"
+t="triangle"
+r="rectangle"
+f= "*"
+print (c," = c ", t," = t ",r," = r")
+while f == '*':
+    selection= input("input the objekt: ")
+    if selection == "c":
+        rad=int(input("input the radius "))
+        print ("circle area= ", pi*rad**2)
+    elif selection == "t":
+   
+        a = float(input("input the a: "))
+        b = float(input("input the b: "))
+        c = float(input("input the c: "))
+        p=(a+b+c)/2
+        print ("triangle area= ", math.sqrt(p * (p - a)*(p - b)*(p - c)))
+    elif selection == "r":
+        a = float( input("input the a: "))
+        b = float(input("input the b: "))
+        print("rectangle area= ", a*b)
+    else:
+        print ("make correct choice!")
+    
+    f= input ("press '*' to contimue, or other to break ")
+
+print("L3.3 Користувач вводить число, програма повинна вивести на екран його опис.\
+Наприклад, «додатне однозначне число», «від’ємне двозначне» тощо.")
+f = '*'
+while f == '*':
+    number= float(input("input the number: ")) 
+    if abs(number-int(number))>0:
+        print("decimal")
+    else:
+        if abs(number) <10:
+            print( "однозначне")
+        elif abs(number) < 100:
+            print("двозначне")
+        elif abs(number)< 1000:
+            print ("трьохзначне")
+        else:
+            print ("чотирьохзначне")
+    if number < 0:
+        print("від’ємне")
+    elif number > 0:
+        print ("додатне")
+    else:
+        print("this is neutral number")
+    f= input ("press '*' to contimue, or other to break ")
+    
+print("L3.5 Відома грошова сума. Розміняти її купюрами 200,\
+      100, 10 і монетою 1 грн., якщо це можливо.")
+money=int(input("input the number of money "))
+if money == 0:
+     money=int(input("no money to change.input the correct number of money "))
+elif money >=200:
+    print("200= %d" %(money/200),"\n100= %d" % (money%200/100),"\n10= %d" % (money%100/10),"\ncoin= %d" % (money%10))       
+elif money <200:
+    print("100= %d" % (money/100),"\n10= %d" % (money%100/10),"\ncoin= %d" % (money%10))
+elif money <100:
+    print("10= %d" % (money/10),"\ncoin= %d" % (money%10))
+elif money <10:
+    print("coins= %d" %(money))
+
+                
