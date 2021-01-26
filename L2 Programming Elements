@@ -1,0 +1,41 @@
+print("Home Work 2.1.\nЗадана вага в грамах. Визначити вагу в тонах і кілограмах.")
+weightGr=  int(input("input the weight value in gr: "))
+print("The same weight in kg=: ",weightGr/1000)
+print("The same weight in ton=: ",weightGr/1000000)
+print()
+
+print("2.2 Відомий обсяг інформації в байтах. Перевести в кілобайти, мегабайти.")
+infoVolume= int(input("Input the Bites number "))
+print("Kilobites:= ",infoVolume/1024)
+print("MegaBites:= ",infoVolume/1048576)
+
+print("""2.3 Користувач вводить два числа. Одне присвоюється одній змінній, а друге - іншій.
+Необхідно поміняти значення змінних так, щоб значення першої виявилося в другій,
+а другої - у першій.""")
+a=45
+b=95
+a,b=b,a
+print ("a= ",a )
+print ("b= ",b)
+
+print("2.4 Обчислити площу і периметр прямокутника за заданими шириною і висотою.")
+height=int(input("input the Height= "))
+width=int(input("input the Width= "))
+print("Rectangle Area= ",(height + width)*2)
+print("Rectangle Perimeter= ",height * width)
+
+      
+print(" 2.5 Обчислити площу і периметр кола по заданому радіусу.")
+import math
+pi=math.pi
+print ("pi= ", pi)
+
+r=int(input("input the radius= "))
+print("Circle Perimeter= ", 2*pi*r)
+print("Circle Area= ", pi*r**2)
+print()
+print("2.6 По двом введеним користувачем катетам прямокутного трикутника обчислити довжину гіпотенузи.")
+import math
+k1=int(input("katet1= "))
+k2=int(input("katet2= "))
+print("gipotenuse= ", math.sqrt(k1**2 + k2**2))
