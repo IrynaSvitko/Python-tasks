@@ -39,3 +39,67 @@ import math
 k1=int(input("katet1= "))
 k2=int(input("katet2= "))
 print("gipotenuse= ", math.sqrt(k1**2 + k2**2))
+
+TASKS
+print("""    L2.task1: Проведіть самостійно наступний експеримент:
+перевірте типи значень "12" і "2.4"? Якого вони типу і чому?""")
+
+x=12
+print("12 is a ", type(x))
+y=2.4
+print("2.4 is a ", type(y))
+
+
+print("""Що відбудеться, якщо рядок "8.53" спробувати перетворити в
+ціле число за допомогою функції int()? Як вирішити цю проблему?""")
+z=str(8.53)
+print(type (z), z)
+c=int(float(z))
+print(type(c), c)
+
+print("Task2:")
+var_int=10
+var_float=8.4
+var_str="No"
+var_big=var_int*3.5
+var_float=var_float-1
+var_div1=var_int/var_float
+var_div2=var_big/var_float
+var_str=var_str*2 + "YesYesYes"
+
+print("var_int= ",var_int)
+print("var_float=(8.4-1)= ",var_float)
+print("var_big=(10*3.5)= ",var_big)
+print("var_div1=(10/(8.4-1))= ",var_div1)
+print("var_div2=(10*3.5/(8.4-1)= ", var_div2)
+print("var_str= ",var_str)
+
+
+print("""Task3.1 Надати змінній а значення “23”.
+Конвертувати її до типу integer.
+Піднести значення змінної а до степеню 2 і результат надати змінній b.
+Значення змінної b поділити на 3 і результат конвертувати до типу integer""")
+
+a=23
+a=int(a)
+b=a**2
+c=int(b/3)
+print("a= ", type(a), "= ",a)
+print("b= ", type(b), "= ",b)
+print("c= ", type(c), "= ",c)
+
+print("""Task3.2 Напишіть програму, яка підтверджує, що інтерпретатор Python
+розрізняє рядкові і заголовні букви в іменах змінних""")
+smallLetter="california"
+bigLetter="California"
+toCheck="california"
+print("california = California: ",smallLetter == bigLetter)
+print("california = california: ",smallLetter == toCheck)
+
+print("""Task3.3 Змініть вираз 100*20/80 так, щоб послідовність виконання операцій
+була зворотною. Який результат ви отримали після його виконання і чому?""")
+x=100*20/80
+y=100*(20/80)
+print("x= 100*20/80= ",x)
+print("y= 100*(20/80)= ",y)
+
