@@ -4,27 +4,27 @@ HW 3: Матриця 5x4 заповнюється введенням з клав
 r,c=5,4 #рядок, колонка
 a=[] # список під суми рядків
 s=0  # підрахунок сум елементів рядка
-matrix=[[int(input("vvedy znachennya masyvu: a[%d][%d] " % (x,y) )) for y in range (c)] for x in range (r-1)]
+matrix=[[int(input("vvedy znachennya masyvu: a[%d][%d] " % (i,j) )) for j in range (c)] for i in range (r-1)]
 #print(matrix)          # виводить список
 
-for x in range (r-1):   # цикл для підрахунку суми по рядкам
+for i in range (r-1):   # цикл для підрахунку суми по рядкам
     s=0                 # обнуляємо  s для наступного рядка
-    for y in range (c):
-        s+=matrix[x][y] # рахує сумму елементів х-го рядка
+    for j in range (c):
+        s+=matrix[i][j] # рахує сумму елементів х-го рядка
     a.append(s)         # добавляем отриману суму в новий порожній список
 #print(a)
  
 matrix.append(a)        # добавляємо рядок з сумами в кінець матриці
-for x in range (r):
-    for y in range (c):
-        print("%6d" %(matrix[x][y]),end="")  # печатаємо кінцеву матрицю
+for i in range (r):
+    for j in range (c):
+        print("%6d" %(matrix[i][j]),end="")  # друкуємо кінцеву матрицю
     print()
 
 ##тут считает сумму по столбикам(just in case)
-##for y in range (c):
+##for j in range (c):
 ##    s=0    
-##    for x in range (r-1):
-##        s+=matrix[x][y]
+##    for i in range (r-1):
+##        s+=matrix[i][j]
 ##    print(s)
 ##    a.append(s)
        
