@@ -19,3 +19,12 @@ for x in range (r):
     for y in range (c):
         print("%6d" %(matrix[x][y]),end="")  # печатаємо кінцеву матрицю
     print()
+
+##тут считает сумму по столбикам(just in case)
+##for y in range (c):
+##    s=0    
+##    for x in range (r-1):
+##        s+=matrix[x][y]
+##    print(s)
+##    a.append(s)
+       
